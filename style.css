@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+/* Common Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #eee;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: #6ac;
+}
+
+.container {
+    margin: 1rem;
+}
+
+/* City Selector */
+
+.city-selector {
+    width: 85%;
+    color: #333;
+}
+
+.city-selector option {
+    color: #333;
+}
+
+.time-now {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Main Section */
+
+.main-section {
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.main-temp {
+    font-size: 3.5rem;
+    font-weight: 300;
+    padding-left: 1rem;
+}
+
+/* Today's Weather */
+
+.today-status {
+    border-radius: 10px 10px 0 0;
+    margin: 1rem auto 0.1rem auto;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.weather-today {
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto 1rem auto;
+    width: 300px;
+    overflow-x: scroll;
+}
+
+.weather-today .weather-box {
+    display: flex;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-today .weather-box:first-child {
+    margin-left: .5rem;
+}
+
+.weather-today .weather-box:last-child {
+    margin-right: .5rem;
+}
+
+.weather-box.vertical {
+    flex-direction: column;
+}
+
+.weather-box.horizontal {
+    flex-direction: row;
+}
+
+.weather-box .hour {
+    padding-bottom: .2rem;
+}
+
+.weather-box .hourly-weather {
+    padding: .2rem 0 0 .25rem;
+}
+
+/* Weekly Weather */
+
+.weather-weekly {
+    border-radius: 10px;
+    margin: 1rem auto 0.1rem auto;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.weather-weekly h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: start;
+    padding: 0 0 .2rem 1rem;
+}
+
+.weather-weekly .weather-box {
+    display: flex;
+    margin: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.weather-weekly .weather-box .day {
+    width: 50px;
+    text-align: start;
+}
+
+.div-line {
+    width: 50px;
+    height: 3px;
+    border-radius: 1px;
+    background: rgb(24, 120, 163);
+    background: linear-gradient(90deg, rgba(24, 120, 163, 1) 0%, rgba(133, 178, 190, 1) 20%, rgba(182, 209, 215, 1) 50%, rgba(83, 90, 110, 1) 80%, rgba(2, 10, 47, 1) 100%);
+}
+
+/* Footer */
+
+footer {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}

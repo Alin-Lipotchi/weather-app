@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/060522162b.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- City Selector -->
+
+        <select name="city" id="city" class="city-selector">
+            <option value="cluj-napoca">Cluj-Napoca</option>
+            <option value="bucuresti">Bucuresti</option>
+            <option value="berlin">Berlin</option>
+        </select>
+
+        <span class="time-now">00:00</span>
+
+        <!-- Main Section -->
+
+        <section class="main-section">
+            <h2 class="city-name">Cluj-Napoca</h2>
+            <h3 class="main-temp">4&#176;</h3>
+            <span class="main-status">Sunny</span>
+            <div class="temps-wrapper">
+                <span class="hi-temp">H: 7&#176;</span>
+                <span class="lo-temp">L: -2&#176;</span>
+            </div>
+        </section>
+        
+        <!-- Today's Weather -->
+        <section class="today-status">
+            <span>It's a nice day to start again</span>
+        </section>
+
+        <section class="weather-today">
+            <!-- This gets auto-completed -->
+            <div class="weather-box vertical">
+                <span class="hour">16</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">6&#176;</span>
+            </div>
+            
+            <div class="weather-box vertical">
+                <span class="hour">17</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">2&#176;</span>
+            </div>
+
+            <div class="weather-box vertical">
+                <span class="hour">18</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">12&#176;</span>
+            </div>
+
+            <div class="weather-box vertical">
+                <span class="hour">19</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">6&#176;</span>
+            </div>
+
+            <div class="weather-box vertical">
+                <span class="hour">20</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">6&#176;</span>
+            </div>
+
+            <div class="weather-box vertical">
+                <span class="hour">21</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">6&#176;</span>
+            </div>
+
+            <div class="weather-box vertical">
+                <span class="hour">22</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">6&#176;</span>
+            </div>
+
+            <div class="weather-box vertical">
+                <span class="hour">23</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="hourly-weather">6&#176;</span>
+            </div>
+
+        </section>
+
+        <!-- Weekly weather -->
+
+        <section class="weather-weekly">
+            <h3><i class="fa-regular fa-calendar"></i> 7 days forecast</h3>
+            <!-- This gets auto-completed -->
+            <div class="weather-box horizontal">
+                <span class="day">Sat</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="daily-lo-weather">L: -2&#176;</span>
+                <div class="div-line"></div>
+                <span class="daily-hi-weather">H: 7&#176;</span>
+            </div>
+
+            <div class="weather-box horizontal">
+                <span class="day">Sun</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="daily-lo-weather">L: -2&#176;</span>
+                <div class="div-line"></div>
+                <span class="daily-hi-weather">H: 7&#176;</span>
+            </div>
+
+            <div class="weather-box horizontal">
+                <span class="day">Mon</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="daily-lo-weather">L: -1&#176;</span>
+                <div class="div-line"></div>
+                <span class="daily-hi-weather">H: 3&#176;</span>
+            </div>
+
+            <div class="weather-box horizontal">
+                <span class="day">Tue</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="daily-lo-weather">L: -1&#176;</span>
+                <div class="div-line"></div>
+                <span class="daily-hi-weather">H: 3&#176;</span>
+            </div>
+
+            <div class="weather-box horizontal">
+                <span class="day">Wed</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="daily-lo-weather">L: -1&#176;</span>
+                <div class="div-line"></div>
+                <span class="daily-hi-weather">H: 3&#176;</span>
+            </div>
+
+            <div class="weather-box horizontal">
+                <span class="day">Thu</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="daily-lo-weather">L: -1&#176;</span>
+                <div class="div-line"></div>
+                <span class="daily-hi-weather">H: 3&#176;</span>
+            </div>
+
+            <div class="weather-box horizontal">
+                <span class="day">Fri</span>
+                <i class="fa-solid fa-sun"></i>
+                <span class="daily-lo-weather">L: -1&#176;</span>
+                <div class="div-line"></div>
+                <span class="daily-hi-weather">H: 3&#176;</span>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="https://github.com/Alin-Lipotchi/weather-app">Click here to go to the Github page of this project.</a></p>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
