@@ -12,7 +12,11 @@
 }
 
 body {
-    background: #6ac;
+    background-image: url("./backgrounds/night.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 650px;
 }
 
 .container {
@@ -21,7 +25,7 @@ body {
 
 /* Disable scrollbar for Chrome */
 
-.products-list::-webkit-scrollbar {
+::-webkit-scrollbar {
     height: 0;
 }
 
@@ -47,7 +51,7 @@ body {
 /* Main Section */
 
 .main-section {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -78,13 +82,13 @@ body {
     border-radius: 10px 10px 0 0;
     margin: 1rem auto 0.1rem auto;
     width: 300px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     padding: 1rem;
     text-align: center;
 }
 
 .weather-today {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     padding: 1rem;
     border-radius: 0 0 10px 10px;
@@ -134,7 +138,7 @@ body {
     border-radius: 10px;
     margin: 1rem auto 0.1rem auto;
     width: 300px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     padding: 1rem;
     text-align: center;
 }
@@ -172,7 +176,7 @@ body {
 /* Footer */
 
 footer {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     padding: 1rem;
     text-align: center;
 }
@@ -183,6 +187,37 @@ footer {
         margin: 0 auto;
         display: block;
         padding: .2rem .5rem;
+    }
+}
+
+@media(min-width: 650px) {
+    body {
+        background: url("./backgrounds/night.jpg") no-repeat center center/cover;
+        background-repeat: repeat-y;
+    }
+
+    html {
+        font-size: 125%;
+    }
+
+    .main-section {
+        width: 500px;
+    }
+
+    .today-status {
+        width: 500px;
+    }
+
+    .weather-today {
+        width: 500px;
+    }
+
+    .weather-weekly {
+        width: 500px;
+    }
+
+    .city-selector {
+        width: 500px;
     }
 }
 

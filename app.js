@@ -62,6 +62,7 @@ let cities = {
     bucharest: "latitude=44.43&longitude=26.10",
     berlin: "latitude=52.52&longitude=13.41",
     hannover: "latitude=53.17&longitude=8.51",
+    paris: "latitude=48.85&longitude=2.35",
 };
 
 // Weather Status Code
@@ -123,6 +124,8 @@ options.forEach((e) => {
             updateData(cities.berlin, "berlin");
         } else if (e.index === 3) {
             updateData(cities.hannover, "hannover");
+        } else if (e.index === 4) {
+            updateData(cities.paris, "paris");
         }
     });
 });
@@ -158,6 +161,14 @@ const citySelectorUpdater = (e, cityName) => {
     // Hourly Section
 
     document.querySelector(".weather-today").innerHTML = ""; // Resets the weather
+
+    // Background
+
+    if (new Date().getHours() > 6 && new Date().getHours() < 19) {
+        document.body.style.backgroundImage = `url("./backgrounds/day.jpg")`;
+    } else {
+        document.body.style.backgroundImage = `url("./backgrounds/night.jpg")`;
+    }
 
     // Assigns the weather status icon depending on day or night
     let hourArr = e.hourly.temperature_2m.slice(0, 24);
@@ -266,9 +277,7 @@ const citySelectorUpdater = (e, cityName) => {
         ".weather-weekly"
     ).innerHTML = `<h3><i class="fa-regular fa-calendar"></i> 7 days forecast</h3>`; // Reset
 
-    // Daily weather status
-
-    e.daily.temperature_2m_max.forEach((el, idx) => {
+    e.daily.time.forEach((el, idx) => {
         let weatherStatus = "";
         if (e.daily.weathercode[idx] === 0 || e.daily.weathercode[idx] === 1) {
             weatherStatus = weatherCodeList[0][1];
@@ -313,7 +322,7 @@ const citySelectorUpdater = (e, cityName) => {
         document.querySelector(
             ".weather-weekly"
         ).innerHTML += `<div class="weather-box horizontal">
-                <span class="day">${weekday[new Date().getDay() + idx].slice(
+                <span class="day">${weekday[new Date(el).getDay()].slice(
                     0,
                     3
                 )}</span>
@@ -322,7 +331,9 @@ const citySelectorUpdater = (e, cityName) => {
                     e.daily.temperature_2m_min[idx]
                 )}&#176;</span>
                 <div class="div-line"></div>
-                <span class="daily-hi-weather">H: ${Math.round(el)}&#176;</span>
+                <span class="daily-hi-weather">H: ${Math.round(
+                    e.daily.temperature_2m_max[idx]
+                )}&#176;</span>
             </div>`;
     });
 };
