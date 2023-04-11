@@ -8,6 +8,10 @@ The app was made using Open-Meteo API (https://open-meteo.com/)
 
 The project is simple weather app which allows the user to see the weather of a city available in the list. The user can forecast at most 7 days.
 
+## external libraries
+
+This project uses Fontawsome Icons
+
 ### to be added
 
 -   the selection of cities will become a search bar as the internal list of cities will grow.
